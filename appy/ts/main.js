@@ -4,27 +4,27 @@ var message = 'hello bantzs';
 console.log(message);
 var title = 'code bants';
 console.log(title);
-var isMong = true;
-var totalMong = 0;
-var mongName = 'Bish bash';
-var sentence = "My name is " + mongName + "\nI am a total mong";
-console.log(sentence);
-var n = null;
-var u = undefined;
-var list1 = [1, 10, 20];
-var list2 = [2, 4, 6];
-var person1 = ['chris', 22];
-var Color;
-(function (Color) {
-    Color[Color["Red"] = 4] = "Red";
-    Color[Color["Green"] = 5] = "Green";
-    Color[Color["Bloo"] = 6] = "Bloo";
-})(Color || (Color = {}));
-;
-var c = Color.Bloo;
-console.log(c);
-var randomValue = 10;
-randomValue = true;
-randomValue = 'Bish bash';
-randomValue = mongName;
-randomValue = c;
+function add(num1, num2) {
+    return num1 + num2;
+}
+console.log(add(5, 10));
+function sub(num1, num2) {
+    if (num2) {
+        return num2 - num1;
+    }
+    return num1;
+}
+console.log(sub(5));
+function div(num1, num2) {
+    if (num2 === void 0) { num2 = 10; }
+    if (num2) {
+        return num2 / num1;
+    }
+    return num1;
+}
+console.log(div(5));
+function namer(person) {
+    console.log(person.firstName + " " + person.lastName);
+    return person.lastName;
+}
+namer({ firstName: 'la la' });

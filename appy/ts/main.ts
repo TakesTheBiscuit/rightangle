@@ -7,45 +7,52 @@ console.log(message);
 const title = 'code bants';
 console.log(title);
 
-let isMong:boolean = true;
-let totalMong:number = 0;
-let mongName:string = 'Bish bash';
-
-let sentence: string = `My name is ${mongName}
-I am a total mong`;
-
-console.log(sentence);
-
-let n: null = null;
-let u:undefined = undefined;
-
-let list1: number[] = [1,10,20];
-let list2: Array<number> = [2,4,6];
-
-let person1: [string, number] = ['chris', 22];
-
-enum Color{Red = 4, Green, Bloo};
-let c: Color = Color.Bloo;
-console.log(c);
-
-let randomValue: any = 10;
-randomValue = true;
-randomValue = 'Bish bash';
-randomValue = mongName;
-randomValue = c;
 
 
+function add(num1: number, num2: number): number {
+    return num1 + num2;
+}
 
-let a;
-a = 10;
+console.log(add(5, 10));
 
-a = 'a';
-a = true;
 
-let baa = 20;
-baa = true;
+function sub(num1: number, num2?: number): number {
+    if (num2) {
+        return num2 - num1;
+    } 
+    return num1;
+}
 
-let multiType: number | boolean;
-multiType = 20;
-multiType = true;
+console.log(sub(5));
+
+
+function div(num1: number, num2: number = 10): number {
+    if (num2) {
+        return num2 / num1;
+    } 
+    return num1;
+}
+
+console.log(div(5));
+
+
+// interfaces solve fugly function definitions
+interface Person {
+    firstName: string;
+    lastName?: string;
+}
+
+
+
+function namer(person: Person): string {
+    console.log(`${person.firstName} ${person.lastName}`);
+
+    return person.lastName;
+}
+
+namer({firstName: 'la la', lastName: 'tellytubby'});
+namer({firstName: 'la la'});
+
+
+
 
