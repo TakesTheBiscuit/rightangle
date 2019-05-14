@@ -68,4 +68,18 @@ class Employee {
 let e = new Employee('peter!');
 e.greet();
 
+class Manager extends Employee {
+    constructor(managerName: string) {
+        super(managerName);
+    }
+
+    delegateWork() {
+        console.log(`manager delegating tasks`);
+    }
+}
+
+let mgr = new Manager('brucey');
+mgr.greet();
+mgr.delegateWork();
+
 
