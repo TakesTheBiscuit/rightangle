@@ -27,4 +27,16 @@ function namer(person) {
     console.log(person.firstName + " " + person.lastName);
     return person.lastName;
 }
+namer({ firstName: 'la la', lastName: 'tellytubby' });
 namer({ firstName: 'la la' });
+var Employee = /** @class */ (function () {
+    function Employee(name) {
+        this.employeeName = name;
+    }
+    Employee.prototype.greet = function () {
+        console.log("greetings " + this.employeeName);
+    };
+    return Employee;
+}());
+var e = new Employee('peter!');
+e.greet();

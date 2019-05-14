@@ -53,6 +53,19 @@ function namer(person: Person): string {
 namer({firstName: 'la la', lastName: 'tellytubby'});
 namer({firstName: 'la la'});
 
+class Employee {
+    employeeName: string;
 
+    constructor(name: string) {
+        this.employeeName = name;
+    }
+
+    greet() {
+        console.log(`greetings ${this.employeeName}`);
+    }
+}
+
+let e = new Employee('peter!');
+e.greet();
 
 
